@@ -6,23 +6,38 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {
+function reverse(str){
+ return str.split('').reduce((reversed, character) => {
+     return character + reversed;
+ }, '');
+
+}
+
+module.exports = reverse;
 //FOR LOOP SOLUTION-
+// function reverse(str) {
+
 // Make an empty string. 
-// Take each character from the original string and stick it into the new one, one at a TimeRanges.
+// Take each character from the original string and stick it into the new one, one at a time.
 // Because adding one character at a time, the string is reversed.
-let reversed = '';
+// let reversed = '';
 
 // same as below for (var i = 0; i < str.length; i++){ use this one if more than one 
 // }
-for (let character of str){
-    reversed = character + reversed;
-}
-return reversed;
-}
+// for (let character of str){
+//     reversed = character + reversed;
+// }
+// return reversed;
+// }
+//Soln #1
+// function reverse (str) {
+//     const arr = str.split('');
+//     arr.reverse();
+//     return arr.join('');
+// }
 
-// //REVERSE HELPER
-// //split() method to return a new ARRAY 'arr'
+//REVERSE HELPER
+//split() method to return a new ARRAY 'arr'
 // var arr = str.split("");
 // //reverse() method to reverse the letters in the ARRAY
 //      arr.reverse("");
