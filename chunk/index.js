@@ -25,7 +25,7 @@ function chunk(array, size) {
 
 module.exports = chunk;
 
-// First soln
+// First soln - iterate throught the entire array
 //  function chunk(array, size) {
 //     const chunked = [];
     
